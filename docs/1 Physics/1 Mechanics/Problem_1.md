@@ -113,7 +113,7 @@ Where $b$ is the drag coefficient and $m$ is the mass of the projectile.
  
 These equations typically require numerical methods to solve.
  
-## 4.  pyhton uygulaması
+
 ! ![alt text](image.png)
  ![alt text](image-1.png)
  ![alt text](image-2.png)
