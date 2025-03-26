@@ -1,117 +1,117 @@
-# Projeksiyon açısının bir fonksiyonu olarak aralığın araştırılması
+# Investigating the Range as a Function of the Angle of Projection
  
-## 1. Teorik Temeller
+## 1. Theoretical Foundation
  
-### Yönetim Denklemlerinin Türetilmesi
+### Deriving the Governing Equations
  
-Bir merminin hareketi, Newton'un ikinci yasası uygulanarak tanımlanabilir. Yataya göre $\theta$ açısında $v_0$ hızla bir başlangıç konumundan fırlatılan bir mermi için elimizde:
+The motion of a projectile can be described by applying Newton's second law. For a projectile launched from an initial position with velocity $v_0$ at an angle $\theta$ with respect to the horizontal, we have:
  
-Yatay yönde (x ekseni):
+In the horizontal direction (x-axis):
 $$\frac{d^2x}{dt^2} = 0$$
  
-Dikey yönde (y ekseni):
+In the vertical direction (y-axis):
 $$\frac{d^2y}{dt^2} = -g$$
  
-Burada $g$ yerçekimi ivmesidir (Dünya'da yaklaşık 9.81 m/s²).
+Where $g$ is the acceleration due to gravity (approximately 9.81 m/s² on Earth).
  
-Bu denklemleri zamana göre başlangıç koşullarıyla bütünleştirirsek:
+Integrating these equations with respect to time with initial conditions:
 - $x(0) = 0$
-- $y(0) = H$ (başlangıç yüksekliği)
+- $y(0) = h$ (initial height)
 - $v_x(0) = v_0\cos(\theta)$
 - $v_y(0) = v_0\sin(\theta)$
  
-Elde ettiklerimiz:
+We obtain:
  
 $$x(t) = (v_0\cos\theta)t$$
 $$y(t) = h + (v_0\sin\theta)t - \frac{1}{2}gt^2$$
  
-Bu parametrik denklemler, merminin herhangi bir zamanda $t konumunu tanımlar.
+These parametric equations describe the position of the projectile at any time $t$.
  
-### Çözüm Ailesi
+### Family of Solutions
  
-Çözüm ailesi, parametrelerin değiştirilmesiyle tanımlanır:
-- İlk hız ($v_0$)
-- Fırlatma açısı ($\theta$)
-- Başlangıç yüksekliği ($h $)
-- Yerçekimi ivmesi ($g$)
+The family of solutions is defined by varying the parameters:
+- Initial velocity ($v_0$)
+- Launch angle ($\theta$)
+- Initial height ($h$)
+- Gravitational acceleration ($g$)
  
-Bu parametrelerin her kombinasyonu benzersiz bir yörünge oluşturur.
+Each combination of these parameters produces a unique trajectory.
  
-## 2. Aralık Analizi
+## 2. Analysis of the Range
  
-### Aralık Denklemi
+### Range Equation
  
-$R$ aralığı, mermi ilk yüksekliğine döndüğünde kat edilen yatay mesafedir. Bunu bulmak için, $y(t) = h$ olduğunu belirlememiz gerekir:
+The range $R$ is the horizontal distance traveled when the projectile returns to its initial height. To find this, we need to determine when $y(t) = h$:
  
 $$h + (v_0\sin\theta)t - \frac{1}{2}gt^2 = h$$
  
-Basit -leştirme:
+Simplifying:
 $$(v_0\sin\theta)t - \frac{1}{2}gt^2 = 0$$
  
-Bu denklemin iki çözümü vardır: $t = 0$ ve $t = \frac{2v_0\sin\theta}{g}$
+This equation has two solutions: $t = 0$ and $t = \frac{2v_0\sin\theta}{g}$
  
-İkinci çözüm bize uçuş süresini verir. Aralık o zaman:
+The second solution gives us the time of flight. The range is then:
  
 $$R = (v_0\cos\theta) \cdot \frac{2v_0\sin\theta}{g} = \frac{v_0^2\sin(2\theta)}{g}$$
  
-Bu, aralığın aşağıdakilerle orantılı olduğunu gösterir:
-- İlk hızın karesi
-- Projeksiyon açısının iki katı sinüs
-- Yerçekimi ivmesi ile ters orantılı
+This demonstrates that the range is proportional to:
+- The square of the initial velocity
+- The sine of twice the angle of projection
+- Inversely proportional to the gravitational acceleration
  
-### Maksimum Menzil için Optimum Açı
+### Optimal Angle for Maximum Range
  
-Aralığı en üst düzeye çıkaran açıyı bulmak için, $\theta$'ye göre farklılaştırırız ve sıfıra eşit olarak ayarlarız:
+To find the angle that maximizes the range, we differentiate with respect to $\theta$ and set it equal to zero:
  
 $$\frac{dR}{d\theta} = \frac{v_0^2\cos(2\theta)}{g} = 0$$
  
-Bu bize $\cos(2\theta) = 0$ verir, dolayısıyla $2\theta = \frac{\pi}{2}$ veya $\theta = \frac{\pi}{4} = 45°$
+This gives us $\cos(2\theta) = 0$, thus $2\theta = \frac{\pi}{2}$ or $\theta = \frac{\pi}{4} = 45°$
  
-Bu nedenle, hava direncinin yokluğunda ve düz bir iniş yüzeyi ile, maksimum menzil 45°'lik bir açıyla elde edilir.
+Therefore, in the absence of air resistance and with a level landing surface, the maximum range is achieved at a 45° angle.
  
-### Başlangıç Yüksekliğinin Etkisi
+### Effect of Initial Height
  
-Mermi, iniş yüzeyinin $h $ üzerindeki bir yükseklikten fırlatılırsa, menzil denklemi daha karmaşık hale gelir:
+If the projectile is launched from a height $h$ above the landing surface, the range equation becomes more complex:
  
-$$R = v_0\cos\theta \cdot t_{iniş}$$
+$$R = v_0\cos\theta \cdot t_{landing}$$
  
-Burada $t_{iniş}$, merminin yer seviyesine ulaştığı zamandır ($y = 0$):
+Where $t_{landing}$ is the time when the projectile reaches the ground level ($y = 0$):
  
-$$h + (v_0\sin\theta)t_{iniş} - \frac{1}{2}gt_{iniş}^2 = 0$$
+$$h + (v_0\sin\theta)t_{landing} - \frac{1}{2}gt_{landing}^2 = 0$$
  
-Bu ikinci dereceden denklemi çözmek:
+Solving this quadratic equation:
  
-$$t_{iniş} = \frac{v_0\sin\teta + \sqrt{(v_0\sin\theta)^2 + 2gh}}{g}$$
+$$t_{landing} = \frac{v_0\sin\theta + \sqrt{(v_0\sin\theta)^2 + 2gh}}{g}$$
  
-Bu, aralığın artık başlangıç yüksekliğine de bağlı olduğu anlamına gelir:
+This means that the range now depends on the initial height as well:
  
 $$R = v_0\cos\theta \cdot \frac{v_0\sin\theta + \sqrt{(v_0\sin\theta)^2 + 2gh}}{g}$$
  
-## 3. Pratik Uygulamalar
+## 3. Practical Applications
  
-### Gerçek Dünyada Dikkat Edilmesi Gerekenler
+### Real-world Considerations
  
-Uygulamada, mermi hareketi şunlardan etkilenir:
-- Hava direnci (sürükleme)
--Rüzgar
-- Değişen yerçekimi alanı
-- Dönen referans çerçeveleri (Coriolis etkisi)
-- Düzgün olmayan arazi
+In practice, projectile motion is influenced by:
+- Air resistance (drag)
+- Wind
+- Varying gravitational field
+- Rotating reference frames (Coriolis effect)
+- Non-uniform terrain
  
-### Hava Direncinin Dahil Edilmesi
+### Incorporating Air Resistance
  
-Hava direnci için basit bir model, hız ile orantılı bir sürükleme kuvveti içermektir:
+A simple model for air resistance is to include a drag force proportional to velocity:
  
 $$F_d = -bv$$
  
-Bu, değiştirilmiş bir diferansiyel denklem kümesine yol açar:
+This leads to a modified set of differential equations:
  
 $$\frac{d^2x}{dt^2} = -\frac{b}{m}v_x$$
 $$\frac{d^2y}{dt^2} = -g - \frac{b}{m}v_y$$
  
-Burada $b$ sürükleme katsayısı ve $m$ merminin kütlesidir.
+Where $b$ is the drag coefficient and $m$ is the mass of the projectile.
  
-Bu denklemler tipik olarak çözmek için sayısal yöntemler gerektirir.
+These equations typically require numerical methods to solve.
  
 ## 4.  pyhton uygulaması
 ! ![alt text](image.png)
