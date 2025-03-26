@@ -172,6 +172,71 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="investigating-the-dynamics-of-a-forced-damped-pendulum">Investigating the Dynamics of a Forced Damped Pendulum</h1>
+<h2 id="1-theoretical-foundation">1. Theoretical Foundation</h2>
+<h3 id="governing-equation">Governing Equation</h3>
+<p>The motion of a forced damped pendulum is governed by the nonlinear second-order differential equation:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L} \sin\theta = A \cos(\omega t)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( \theta(t) \)</span>: angular displacement  </li>
+<li><span class="arithmatex">\( b \)</span>: damping coefficient  </li>
+<li><span class="arithmatex">\( g \)</span>: gravitational acceleration  </li>
+<li><span class="arithmatex">\( L \)</span>: length of the pendulum  </li>
+<li><span class="arithmatex">\( A \)</span>: amplitude of the driving force  </li>
+<li><span class="arithmatex">\( \omega \)</span>: driving force frequency  </li>
+</ul>
+<h3 id="small-angle-approximation">Small-Angle Approximation</h3>
+<p>For small angles <span class="arithmatex">\( \theta \ll 1 \)</span>, we approximate <span class="arithmatex">\( \sin\theta \approx \theta \)</span>, which simplifies the equation to:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L} \theta = A \cos(\omega t)
+\]</div>
+<p>This is a linear non-homogeneous differential equation, analogous to a driven harmonic oscillator.</p>
+<hr/>
+<h2 id="2-analysis-of-dynamics">2. Analysis of Dynamics</h2>
+<h3 id="parameter-effects">Parameter Effects</h3>
+<ul>
+<li><strong>Damping coefficient (b):</strong> Controls how quickly oscillations decay.  </li>
+<li><strong>Driving amplitude (A):</strong> Governs energy input into the system.  </li>
+<li><strong>Driving frequency (ω):</strong> Affects resonance and can lead to complex or chaotic motion.</li>
+</ul>
+<h3 id="chaos-and-regularity">Chaos and Regularity</h3>
+<p>As parameters vary, the system may transition from regular periodic behavior to chaotic dynamics. These transitions are observable in phase portraits and Poincaré sections.</p>
+<hr/>
+<h2 id="3-practical-applications">3. Practical Applications</h2>
+<ul>
+<li><strong>Energy Harvesting Devices:</strong> Utilizing resonance to convert vibrations into electrical energy.  </li>
+<li><strong>Suspension Bridges:</strong> Oscillations under wind or pedestrian traffic resemble driven pendulum behavior.  </li>
+<li><strong>RLC Circuits:</strong> The electrical analog of the mechanical forced damped oscillator.  </li>
+<li><strong>Biomechanics:</strong> Human leg motion during walking or running mimics pendulum dynamics with periodic forcing.</li>
+</ul>
+<hr/>
+<h2 id="4-simulation-and-visualization">4. Simulation and Visualization</h2>
+<p>Using Python:</p>
+<ul>
+<li>We solve the nonlinear differential equation numerically.  </li>
+<li>We visualize the results using:</li>
+<li><strong>Angle vs. Time</strong> plot  </li>
+<li><strong>Phase Portrait</strong> (Angle vs. Angular Velocity)  </li>
+<li><strong>Poincaré Section</strong> (discrete sampling each driving cycle)
+<img alt="alt text" src="../image-6.png"/>
+---<img alt="alt text" src="../image-5.png"/></li>
+</ul>
+<h2 id="5-limitations-and-extensions">5. Limitations and Extensions</h2>
+<h3 id="limitations">Limitations</h3>
+<ul>
+<li>Small-angle approximation is only valid for <span class="arithmatex">\( \theta \ll 1 \)</span>.  </li>
+<li>Real systems may include nonlinear damping.  </li>
+<li>External forcing can be non-periodic or noisy in real-world settings.</li>
+</ul>
+<h3 id="extensions">Extensions</h3>
+<ul>
+<li>Add nonlinear damping (e.g., quadratic or Coulomb).  </li>
+<li>Introduce stochastic or chaotic forcing.  </li>
+<li>Plot bifurcation diagrams to explore system behavior across parameter changes.</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
