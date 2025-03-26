@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Projeksiyon açısının bir fonksiyonu olarak aralığın araştırılması - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Projeksiyon a\u00e7\u0131s\u0131n\u0131n bir fonksiyonu olarak aral\u0131\u011f\u0131n ara\u015ft\u0131r\u0131lmas\u0131";
         var mkdocs_page_input_path = "1 Physics/1 Mechanics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -46,8 +46,36 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal current">1 Mechanics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Projeksiyon açısının bir fonksiyonu olarak aralığın araştırılması</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#1-teorik-temeller">1. Teorik Temeller</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#yonetim-denklemlerinin-turetilmesi">Yönetim Denklemlerinin Türetilmesi</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#cozum-ailesi">Çözüm Ailesi</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-aralk-analizi">2. Aralık Analizi</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#aralk-denklemi">Aralık Denklemi</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#maksimum-menzil-icin-optimum-ac">Maksimum Menzil için Optimum Açı</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#baslangc-yuksekliginin-etkisi">Başlangıç Yüksekliğinin Etkisi</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-pratik-uygulamalar">3. Pratik Uygulamalar</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#gercek-dunyada-dikkat-edilmesi-gerekenler">Gerçek Dünyada Dikkat Edilmesi Gerekenler</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#hava-direncinin-dahil-edilmesi">Hava Direncinin Dahil Edilmesi</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-pyhton-uygulamas">4. pyhton uygulaması</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -163,7 +191,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">1 Mechanics</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Projeksiyon açısının bir fonksiyonu olarak aralığın araştırılması</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,10 +199,78 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
-<p>prınt hello worl
-sgknlvkckvfşlkvl
-ffşjbdfjbdfbmlf</p>
+<h1 id="projeksiyon-acsnn-bir-fonksiyonu-olarak-aralgn-arastrlmas">Projeksiyon açısının bir fonksiyonu olarak aralığın araştırılması</h1>
+<h2 id="1-teorik-temeller">1. Teorik Temeller</h2>
+<h3 id="yonetim-denklemlerinin-turetilmesi">Yönetim Denklemlerinin Türetilmesi</h3>
+<p>Bir merminin hareketi, Newton'un ikinci yasası uygulanarak tanımlanabilir. Yataya göre <span class="arithmatex">\(\theta\)</span> açısında <span class="arithmatex">\(v_0\)</span> hızla bir başlangıç konumundan fırlatılan bir mermi için elimizde:</p>
+<p>Yatay yönde (x ekseni):
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2x}{dt^2} = 0\)</span>\)</span></p>
+<p>Dikey yönde (y ekseni):
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{d^2y}{dt^2} = -g\)</span>\)</span></p>
+<p>Burada <span class="arithmatex">\(g\)</span> yerçekimi ivmesidir (Dünya'da yaklaşık 9.81 m/s²).</p>
+<p>Bu denklemleri zamana göre başlangıç koşullarıyla bütünleştirirsek:
+- <span class="arithmatex">\(x(0) = 0\)</span>
+- <span class="arithmatex">\(y(0) = H\)</span> (başlangıç yüksekliği)
+- <span class="arithmatex">\(v_x(0) = v_0\cos(\theta)\)</span>
+- <span class="arithmatex">\(v_y(0) = v_0\sin(\theta)\)</span></p>
+<p>Elde ettiklerimiz:</p>
+<div class="arithmatex">\[x(t) = (v_0\cos\theta)t$$
+$$y(t) = h + (v_0\sin\theta)t - \frac{1}{2}gt^2\]</div>
+<p>Bu parametrik denklemler, merminin herhangi bir zamanda $t konumunu tanımlar.</p>
+<h3 id="cozum-ailesi">Çözüm Ailesi</h3>
+<p>Çözüm ailesi, parametrelerin değiştirilmesiyle tanımlanır:
+- İlk hız (<span class="arithmatex">\(v_0\)</span>)
+- Fırlatma açısı (<span class="arithmatex">\(\theta\)</span>)
+- Başlangıç yüksekliği (<span class="arithmatex">\(h <span class="arithmatex">\()
+- Yerçekimi ivmesi (\)</span>g\)</span>)</p>
+<p>Bu parametrelerin her kombinasyonu benzersiz bir yörünge oluşturur.</p>
+<h2 id="2-aralk-analizi">2. Aralık Analizi</h2>
+<h3 id="aralk-denklemi">Aralık Denklemi</h3>
+<p><span class="arithmatex">\(R\)</span> aralığı, mermi ilk yüksekliğine döndüğünde kat edilen yatay mesafedir. Bunu bulmak için, <span class="arithmatex">\(y(t) = h\)</span> olduğunu belirlememiz gerekir:</p>
+<div class="arithmatex">\[h + (v_0\sin\theta)t - \frac{1}{2}gt^2 = h\]</div>
+<p>Basit -leştirme:
+<span class="arithmatex">\(<span class="arithmatex">\((v_0\sin\theta)t - \frac{1}{2}gt^2 = 0\)</span>\)</span></p>
+<p>Bu denklemin iki çözümü vardır: <span class="arithmatex">\(t = 0\)</span> ve <span class="arithmatex">\(t = \frac{2v_0\sin\theta}{g}\)</span></p>
+<p>İkinci çözüm bize uçuş süresini verir. Aralık o zaman:</p>
+<div class="arithmatex">\[R = (v_0\cos\theta) \cdot \frac{2v_0\sin\theta}{g} = \frac{v_0^2\sin(2\theta)}{g}\]</div>
+<p>Bu, aralığın aşağıdakilerle orantılı olduğunu gösterir:
+- İlk hızın karesi
+- Projeksiyon açısının iki katı sinüs
+- Yerçekimi ivmesi ile ters orantılı</p>
+<h3 id="maksimum-menzil-icin-optimum-ac">Maksimum Menzil için Optimum Açı</h3>
+<p>Aralığı en üst düzeye çıkaran açıyı bulmak için, <span class="arithmatex">\(\theta\)</span>'ye göre farklılaştırırız ve sıfıra eşit olarak ayarlarız:</p>
+<div class="arithmatex">\[\frac{dR}{d\theta} = \frac{v_0^2\cos(2\theta)}{g} = 0\]</div>
+<p>Bu bize <span class="arithmatex">\(\cos(2\theta) = 0\)</span> verir, dolayısıyla <span class="arithmatex">\(2\theta = \frac{\pi}{2}\)</span> veya <span class="arithmatex">\(\theta = \frac{\pi}{4} = 45°\)</span></p>
+<p>Bu nedenle, hava direncinin yokluğunda ve düz bir iniş yüzeyi ile, maksimum menzil 45°'lik bir açıyla elde edilir.</p>
+<h3 id="baslangc-yuksekliginin-etkisi">Başlangıç Yüksekliğinin Etkisi</h3>
+<p>Mermi, iniş yüzeyinin $h $ üzerindeki bir yükseklikten fırlatılırsa, menzil denklemi daha karmaşık hale gelir:</p>
+<div class="arithmatex">\[R = v_0\cos\theta \cdot t_{iniş}\]</div>
+<p>Burada <span class="arithmatex">\(t_{iniş}\)</span>, merminin yer seviyesine ulaştığı zamandır (<span class="arithmatex">\(y = 0\)</span>):</p>
+<div class="arithmatex">\[h + (v_0\sin\theta)t_{iniş} - \frac{1}{2}gt_{iniş}^2 = 0\]</div>
+<p>Bu ikinci dereceden denklemi çözmek:</p>
+<div class="arithmatex">\[t_{iniş} = \frac{v_0\sin\teta + \sqrt{(v_0\sin\theta)^2 + 2gh}}{g}\]</div>
+<p>Bu, aralığın artık başlangıç yüksekliğine de bağlı olduğu anlamına gelir:</p>
+<div class="arithmatex">\[R = v_0\cos\theta \cdot \frac{v_0\sin\theta + \sqrt{(v_0\sin\theta)^2 + 2gh}}{g}\]</div>
+<h2 id="3-pratik-uygulamalar">3. Pratik Uygulamalar</h2>
+<h3 id="gercek-dunyada-dikkat-edilmesi-gerekenler">Gerçek Dünyada Dikkat Edilmesi Gerekenler</h3>
+<p>Uygulamada, mermi hareketi şunlardan etkilenir:
+- Hava direnci (sürükleme)
+-Rüzgar
+- Değişen yerçekimi alanı
+- Dönen referans çerçeveleri (Coriolis etkisi)
+- Düzgün olmayan arazi</p>
+<h3 id="hava-direncinin-dahil-edilmesi">Hava Direncinin Dahil Edilmesi</h3>
+<p>Hava direnci için basit bir model, hız ile orantılı bir sürükleme kuvveti içermektir:</p>
+<div class="arithmatex">\[F_d = -bv\]</div>
+<p>Bu, değiştirilmiş bir diferansiyel denklem kümesine yol açar:</p>
+<div class="arithmatex">\[\frac{d^2x}{dt^2} = -\frac{b}{m}v_x$$
+$$\frac{d^2y}{dt^2} = -g - \frac{b}{m}v_y\]</div>
+<p>Burada <span class="arithmatex">\(b\)</span> sürükleme katsayısı ve <span class="arithmatex">\(m\)</span> merminin kütlesidir.</p>
+<p>Bu denklemler tipik olarak çözmek için sayısal yöntemler gerektirir.</p>
+<h2 id="4-pyhton-uygulamas">4.  pyhton uygulaması</h2>
+<p>! <img alt="alt text" src="../image.png"/>
+<img alt="alt text" src="../image-1.png"/>
+<img alt="alt text" src="../image-2.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
