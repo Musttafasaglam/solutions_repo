@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Orbital Period and Orbital Radius - Physics and Mathematics</title>
+<title>Problem 1 - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Orbital Period and Orbital Radius";
+        var mkdocs_page_name = "Problem 1";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -54,17 +54,23 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">2 Gravity</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Orbital Period and Orbital Radius</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#keplers-third-law-derivation-for-circular-orbits">Kepler's Third Law: Derivation for Circular Orbits</a>
+<li class="toctree-l3"><a class="reference internal" href="#derivation-for-circular-orbits">Derivation for Circular Orbits</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#keplers-third-law">Kepler’s Third Law</a>
+<li class="toctree-l3"><a class="reference internal" href="#implications-in-astronomy">Implications in Astronomy</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#applications-in-astronomy">Applications in Astronomy</a>
+<li class="toctree-l3"><a class="reference internal" href="#real-world-examples">Real-World Examples</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#example-moon-around-earth">Example: Moon Around Earth</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#real-world-example-moon">Real-World Example: Moon</a>
+<li class="toctree-l4"><a class="reference internal" href="#example-earth-around-sun">Example: Earth Around Sun</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#extension-to-elliptical-orbits">Extension to Elliptical Orbits</a>
 </li>
 </ul>
 </li>
@@ -173,7 +179,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">Orbital Period and Orbital Radius</li>
+<li class="breadcrumb-item active">Problem 1</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -181,8 +187,65 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="orbital-period-and-orbital-radius">Orbital Period and Orbital Radius</h1>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h1 id="orbital-period-and-orbital-radius"># Orbital Period and Orbital Radius</h1>
 <h2 id="motivation">Motivation</h2>
+<p>Kepler's Third Law provides a fundamental insight into orbital mechanics:</p>
+<blockquote>
+<p>The square of the orbital period (<span class="arithmatex">\(T^2\)</span>) of a planet is directly proportional to the cube of the semi-major axis (<span class="arithmatex">\(r^3\)</span>) of its orbit:</p>
+</blockquote>
+<div class="arithmatex">\[ T^2 \propto r^3 \]</div>
+<p>This law is essential for understanding the motion of celestial bodies under the influence of gravity.</p>
+<h2 id="derivation-for-circular-orbits">Derivation for Circular Orbits</h2>
+<p>Consider a body of mass <span class="arithmatex">\(m\)</span> orbiting a larger mass <span class="arithmatex">\(M\)</span> (e.g., a planet orbiting the Sun) in a circular orbit.</p>
+<ol>
+<li>Gravitational force provides the necessary centripetal force:</li>
+</ol>
+<div class="arithmatex">\[ \frac{G M m}{r^2} = \frac{m v^2}{r} \]</div>
+<ol>
+<li>Simplify and solve for velocity <span class="arithmatex">\(v\)</span>:</li>
+</ol>
+<div class="arithmatex">\[ v^2 = \frac{G M}{r} \]</div>
+<ol>
+<li>Orbital period is:</li>
+</ol>
+<div class="arithmatex">\[ T = \frac{2\pi r}{v} \]</div>
+<p>Substitute <span class="arithmatex">\(v\)</span>:</p>
+<div class="arithmatex">\[ T = 2\pi r \sqrt{\frac{r}{G M}} = 2\pi \sqrt{\frac{r^3}{G M}} \]</div>
+<ol>
+<li>Therefore,</li>
+</ol>
+<div class="arithmatex">\[ T^2 = \frac{4\pi^2 r^3}{G M} \]</div>
+<p>This confirms Kepler's Third Law:</p>
+<div class="arithmatex">\[ T^2 \propto r^3 \]</div>
+<h2 id="implications-in-astronomy">Implications in Astronomy</h2>
+<ul>
+<li>Allows determination of planetary masses.</li>
+<li>Enables calculation of distances in planetary systems.</li>
+<li>Satellite orbit planning relies heavily on this law.</li>
+<li>Used in exoplanet studies to estimate star and planet properties.</li>
+</ul>
+<h2 id="real-world-examples">Real-World Examples</h2>
+<h3 id="example-moon-around-earth">Example: Moon Around Earth</h3>
+<ul>
+<li>Orbital radius <span class="arithmatex">\(r \approx 3.84 \times 10^8\)</span> m</li>
+<li>Orbital period <span class="arithmatex">\(T \approx 27.3\)</span> days <span class="arithmatex">\(= 2.36 \times 10^6\)</span> s</li>
+</ul>
+<p>Compute <span class="arithmatex">\(\frac{T^2}{r^3}\)</span>:</p>
+<div class="arithmatex">\[ \frac{(2.36 \times 10^6)^2}{(3.84 \times 10^8)^3} \approx 2.95 \times 10^{-14} \]</div>
+<h3 id="example-earth-around-sun">Example: Earth Around Sun</h3>
+<ul>
+<li><span class="arithmatex">\(r \approx 1.5 \times 10^{11}\)</span> m</li>
+<li><span class="arithmatex">\(T = 1\)</span> year <span class="arithmatex">\(= 3.15 \times 10^7\)</span> s</li>
+</ul>
+<div class="arithmatex">\[ \frac{T^2}{r^3} \approx 2.96 \times 10^{-19} \]</div>
+<h2 id="extension-to-elliptical-orbits">Extension to Elliptical Orbits</h2>
+<p>Kepler's Third Law also holds for elliptical orbits when <span class="arithmatex">\(r\)</span> is replaced with the semi-major axis <span class="arithmatex">\(a\)</span>:</p>
+<div class="arithmatex">\[ T^2 = \frac{4\pi^2 a^3}{G M} \]</div>
+<p>This general form explains motions of planets, comets, and exoplanets with non-circular orbits.</p>
+<p>=======</p>
+<h1 id="orbital-period-and-orbital-radius_1">Orbital Period and Orbital Radius</h1>
+<h2 id="motivation_1">Motivation</h2>
 <p>The relationship between the square of the orbital period and the cube of the orbital radius, known as <strong>Kepler's Third Law</strong>, forms a foundational pillar of celestial mechanics. It reveals the harmony of planetary motion and provides a gateway to calculating distances and masses in space.</p>
 <hr/>
 <h2 id="keplers-third-law-derivation-for-circular-orbits">Kepler's Third Law: Derivation for Circular Orbits</h2>
@@ -220,6 +283,21 @@ T^2 \propto r^3
 <li>Orbital radius: <span class="arithmatex">\(r = 3.84 \times 10^8\)</span> m</li>
 <li><span class="arithmatex">\(T = 2\pi \sqrt{\frac{r^3}{G M}} \approx 2.36 \times 10^6\)</span> s <span class="arithmatex">\(\approx\)</span> 27.3 days</li>
 </ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>cf9201733f6f52c1cb81ae00ba0425269ce887ea</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
