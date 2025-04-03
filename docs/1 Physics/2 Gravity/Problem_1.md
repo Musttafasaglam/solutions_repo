@@ -1,5 +1,5 @@
 
-# # Orbital Period and Orbital Radius
+ # Orbital Period and Orbital Radius
 
 ## Motivation
 Kepler's Third Law provides a fundamental insight into orbital mechanics:
