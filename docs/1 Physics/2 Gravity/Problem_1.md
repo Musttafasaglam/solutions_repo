@@ -121,18 +121,4 @@ $$
 
 ---
 
-## Applications in Astronomy
 
-- **Planetary Motion**: By observing $T$, we can estimate orbital radius $r$.
-- **Satellite Orbits**: Used to determine periods for communication and GPS satellites.
-- **Binary Star Systems**: Inferring masses from orbital characteristics.
-
----
-
-## Real-World Example: Moon
-
-- Orbital radius: $r = 3.84 \times 10^8$ m
-- $T = 2\pi \sqrt{\frac{r^3}{G M}} \approx 2.36 \times 10^6$ s $\approx$ 27.3 days
-
-
->>>>>>> cf9201733f6f52c1cb81ae00ba0425269ce887ea
