@@ -41,31 +41,9 @@ $$
 
 
 ---
+![Screenshot 2025-04-03 045855](https://github.com/user-attachments/assets/641bd61d-1c09-4c3f-a839-82e31412ceee)
 
-## Python Simulation for Verification
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Constants
-G = 6.67430e-11       # m^3 kg^-1 s^-2
-M = 5.972e24          # kg (mass of Earth)
-
-# Orbital radii (in meters)
-radii = np.linspace(7e6, 4.2e7, 100)  # from LEO to GEO
-
-# Calculate orbital periods
-periods = 2 * np.pi * np.sqrt(radii**3 / (G * M))
-
-# Plot T^2 vs r^3
-plt.figure(figsize=(8, 6))
-plt.plot(radii**3, periods**2)
-plt.xlabel("$r^3$ (m³)")
-plt.ylabel("$T^2$ (s²)")
-plt.title("Kepler's Third Law: $T^2$ vs $r^3$")
-plt.grid(True)
-plt.show()
 ```
 
 ---
