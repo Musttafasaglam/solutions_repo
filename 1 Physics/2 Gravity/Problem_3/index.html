@@ -60,7 +60,23 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Trajectories of a Freely Released Payload Near Earth</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#trajectory-classification">Trajectory Classification</a>
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#core-physical-principles">Core Physical Principles</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#universal-gravitation">Universal Gravitation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#gravitational-acceleration">Gravitational Acceleration</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#trajectory-types-based-on-energy">🌀 Trajectory Types Based on Energy</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#escape-velocity">Escape Velocity</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#simulation-strategy">🧠 Simulation Strategy</a>
 </li>
 </ul>
 </li>
@@ -174,16 +190,60 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="trajectories-of-a-freely-released-payload-near-earth">Trajectories of a Freely Released Payload Near Earth</h1>
-<p><img alt="alt text" src="../image-1.png"/></p>
+<h2 id="motivation">Motivation</h2>
+<p>When a payload is released from a moving rocket or satellite near Earth, its path is dictated by the delicate balance of gravitational pull and the initial velocity vector. This motion is central to space operations such as orbital insertion, satellite deployment, and atmospheric reentry. Understanding these paths enables precise mission planning and execution.</p>
 <hr/>
-<h2 id="trajectory-classification">Trajectory Classification</h2>
+<h2 id="core-physical-principles">Core Physical Principles</h2>
+<h3 id="universal-gravitation">Universal Gravitation</h3>
+<p>According to Newton’s Law:</p>
+<p>[
+$$
+F = G \frac{M m}{r^2}
+$$</p>
+<p>]</p>
+<p>Where:</p>
 <ul>
-<li><em>Suborbital</em>: Payload falls back.</li>
-<li><em>Orbital</em>: Stays in closed elliptical path.</li>
-<li><em>Escape</em>: Unbound trajectory if <span class="arithmatex">\(v &gt; v_{\text{esc}}\)</span></li>
+<li><span class="arithmatex">\( M \)</span>: Earth's mass  </li>
+<li><span class="arithmatex">\( m \)</span>: payload mass  </li>
+<li><span class="arithmatex">\( r \)</span>: distance from Earth's center  </li>
 </ul>
 <hr/>
-<p>These simulations, grounded in physical laws, help illustrate how gravity shapes motion in space and are indispensable for mission planning and orbital dynamics.</p>
+<h3 id="gravitational-acceleration">Gravitational Acceleration</h3>
+<p>The gravitational force results in an acceleration:</p>
+<p>[
+$$
+\vec{a} = -\frac{G M}{r^3} \vec{r}
+$$</p>
+<p>]</p>
+<p>This acceleration always points toward Earth’s center and governs the curvature of the path.</p>
+<hr/>
+<h2 id="trajectory-types-based-on-energy">🌀 Trajectory Types Based on Energy</h2>
+<p>The total mechanical energy <span class="arithmatex">\( E \)</span> of the payload is:</p>
+<p>[
+$$
+E = \frac{1}{2}mv^2 - \frac{G M m}{r}
+$$</p>
+<p>]</p>
+<p>This determines the type of trajectory:</p>
+<ul>
+<li><strong>Elliptical orbit</strong> <span class="arithmatex">\( (E &lt; 0) \)</span>: Bound, repeating path</li>
+<li><strong>Parabolic escape</strong> <span class="arithmatex">\( (E = 0) \)</span>: Just enough energy to escape</li>
+<li><strong>Hyperbolic escape</strong> <span class="arithmatex">\( (E &gt; 0) \)</span>: Escapes with excess energy</li>
+</ul>
+<hr/>
+<h3 id="escape-velocity">Escape Velocity</h3>
+<p>The threshold for unbound motion:</p>
+<p>[
+$$
+v_{\text{esc}} = \sqrt{\frac{2GM}{r}}
+$$</p>
+<p>]</p>
+<p>If a payload exceeds this, it is no longer gravitationally bound to Earth.</p>
+<hr/>
+<h2 id="simulation-strategy">🧠 Simulation Strategy</h2>
+<p>We simulate the motion using <strong>semi-implicit (symplectic) Euler integration</strong> to better conserve energy in long-term simulations. This gives us better behavior in near-orbit paths compared to naive Euler.</p>
+<hr/>
+<p><img alt="alt text" src="../image-3.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
