@@ -10,7 +10,7 @@ The relationship between the square of the orbital period and the cube of the or
 
 From Newton's law of gravitation and centripetal force:
 
-## Kepler’s Third Law
+
 
 ## Kepler’s Third Law
 
