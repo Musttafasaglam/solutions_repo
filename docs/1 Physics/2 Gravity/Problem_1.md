@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # # Orbital Period and Orbital Radius
 
 ## Motivation
