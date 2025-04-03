@@ -48,7 +48,7 @@ This acceleration always points toward Earth’s center and governs the curvatur
 
 ---
 
-## 🌀 Trajectory Types Based on Energy
+##  Trajectory Types Based on Energy
 
 The total mechanical energy \( E \) of the payload is:
 
@@ -82,7 +82,7 @@ If a payload exceeds this, it is no longer gravitationally bound to Earth.
 
 ---
 
-## 🧠 Simulation Strategy
+##  Simulation Strategy
 
 We simulate the motion using **semi-implicit (symplectic) Euler integration** to better conserve energy in long-term simulations. This gives us better behavior in near-orbit paths compared to naive Euler.
 
