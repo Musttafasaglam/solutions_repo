@@ -58,11 +58,19 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Escape Velocities and Cosmic Velocities</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#definitions">Definitions</a>
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#cosmic-velocities">Cosmic Velocities</a>
+<li class="toctree-l3"><a class="reference internal" href="#definitions-and-physical-meanings">Definitions and Physical Meanings</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#first-cosmic-velocity-v_1">First Cosmic Velocity (\(v_1\))</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#use-in-space-exploration">Use in Space Exploration</a>
+<li class="toctree-l4"><a class="reference internal" href="#second-cosmic-velocity-v_2">Second Cosmic Velocity (\(v_2\))</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#third-cosmic-velocity-v_3">Third Cosmic Velocity (\(v_3\))</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#parameters-affecting-velocities">📐 Parameters Affecting Velocities</a>
 </li>
 </ul>
 </li>
@@ -178,33 +186,63 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="escape-velocities-and-cosmic-velocities">Escape Velocities and Cosmic Velocities</h1>
-<h2 id="definitions">Definitions</h2>
-<h2 id="cosmic-velocities">Cosmic Velocities</h2>
-<ol>
-<li>
-<p><em>First Cosmic Velocity</em> (<span class="arithmatex">\(v_1\)</span>) – Speed to achieve a stable circular orbit:<br/>
-   $$
-   v_1 = \sqrt{\frac{G M}{r}}
-   $$</p>
-</li>
-<li>
-<p><em>Second Cosmic Velocity</em> (<span class="arithmatex">\(v_2\)</span>) – Escape velocity:<br/>
-   $$
-   v_2 = \sqrt{\frac{2 G M}{r}}
-   $$</p>
-</li>
-<li>
-<p><em>Third Cosmic Velocity</em> (<span class="arithmatex">\(v_3\)</span>) – Speed to escape the Sun from Earth orbit:  </p>
-</li>
-</ol>
-<p><a href="../image.png">alt text</a></p>
+<h2 id="motivation">Motivation</h2>
+<p>Escape velocity determines how much energy a spacecraft needs to break free from the gravity of a planet or a star. The extended concept of cosmic velocities defines three thresholds that shape the trajectory of all space missions—whether they're orbiting Earth, flying to Mars, or aiming for the stars.</p>
+<p>Understanding these thresholds is a cornerstone in mission design, launch dynamics, and fuel budgeting.</p>
 <hr/>
-<h2 id="use-in-space-exploration">Use in Space Exploration</h2>
+<h2 id="definitions-and-physical-meanings">Definitions and Physical Meanings</h2>
+<h3 id="first-cosmic-velocity-v_1">First Cosmic Velocity (<span class="arithmatex">\(v_1\)</span>)</h3>
+<p>The minimum speed needed for a stable <strong>circular orbit</strong> just above a celestial body's surface:</p>
+<p>[
+$ v_1 = \sqrt{\frac{G M}{R}} $</p>
 <ul>
-<li><em>First Cosmic</em>: Achieve low Earth orbit (LEO).</li>
-<li><em>Second Cosmic</em>: Leave Earth's gravity (e.g., Moon or Mars missions).</li>
-<li><em>Third Cosmic</em>: Leave Solar System (e.g., Voyager probes).</li>
+<li>The object remains in free fall around the planet.</li>
+<li>Typical application: artificial satellites.</li>
 </ul>
+<hr/>
+<h3 id="second-cosmic-velocity-v_2">Second Cosmic Velocity (<span class="arithmatex">\(v_2\)</span>)</h3>
+<p>The <strong>escape velocity</strong>, allowing an object to leave the gravitational field without further propulsion:</p>
+<p>[
+<span class="arithmatex">\(v_2 = \sqrt{2} \cdot v_1 = \sqrt{\frac{2 G M}{R}}\)</span></p>
+<ul>
+<li>Object reaches "infinity" with zero residual speed.</li>
+<li>Used for Moon missions, planetary probes.</li>
+</ul>
+<hr/>
+<h3 id="third-cosmic-velocity-v_3">Third Cosmic Velocity (<span class="arithmatex">\(v_3\)</span>)</h3>
+<p>The speed required to escape the <strong>Sun's gravity</strong> starting from a planet's orbit:</p>
+<p>[
+<span class="arithmatex">\(v_3 = \sqrt{v_2^2 + v_{\text{orb}}^2}\)</span></p>
+<ul>
+<li><span class="arithmatex">\(v_{\text{orb}}\)</span>: orbital velocity of the planet around the Sun.</li>
+<li>Required for interstellar missions (e.g. Voyager).</li>
+</ul>
+<hr/>
+<h2 id="parameters-affecting-velocities">📐 Parameters Affecting Velocities</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mass (<span class="arithmatex">\(M\)</span>)</strong></td>
+<td>Heavier planets → Higher velocities</td>
+</tr>
+<tr>
+<td><strong>Radius (<span class="arithmatex">\(R\)</span>)</strong></td>
+<td>Smaller radius → Greater surface gravity</td>
+</tr>
+<tr>
+<td><strong>Orbital speed (<span class="arithmatex">\(v_{\text{orb}}\)</span>)</strong></td>
+<td>Affects only <span class="arithmatex">\(v_3\)</span>, not <span class="arithmatex">\(v_1\)</span> or <span class="arithmatex">\(v_2\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<p><img alt="alt text" src="../image-2.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
