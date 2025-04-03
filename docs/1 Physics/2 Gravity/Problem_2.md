@@ -17,10 +17,10 @@
 3. *Third Cosmic Velocity* ($v_3$) – Speed to escape the Sun from Earth orbit:  
   
 
----![alt text](image.png)
+[alt text](image.png)
 
 
-!
+
 
 
 ---
