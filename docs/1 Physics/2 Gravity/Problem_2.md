@@ -49,7 +49,7 @@ $v_3 = \sqrt{v_2^2 + v_{\text{orb}}^2}$
 
 ---
 
-## 📐 Parameters Affecting Velocities
+##  Parameters Affecting Velocities
 
 | Parameter | Effect |
 |----------|--------|
