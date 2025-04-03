@@ -15,9 +15,7 @@
    $$
 
 3. *Third Cosmic Velocity* ($v_3$) – Speed to escape the Sun from Earth orbit:  
-   $$
-   v_3 = \sqrt{v_{\text{earth}}^2 + v_2^2}
-   $$
+  
 
 ---![alt text](image.png)
 
