@@ -13,7 +13,9 @@ Understanding these thresholds is a cornerstone in mission design, launch dynami
 ###  First Cosmic Velocity ($v_1$)
 The minimum speed needed for a stable **circular orbit** just above a celestial body's surface:
 
-\[$ v_1 = \sqrt{\frac{G M}{R}} $]
+# v1 = sqrt(G * M / R)
+# LaTeX: v_1 = \sqrt{\frac{G M}{R}}
+
 
 
 
