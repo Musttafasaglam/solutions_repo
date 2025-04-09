@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Interference Patterns on a Water Surface from Point Sources at Regular Polygon Vertices - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Interference Patterns on a Water Surface from Point Sources at Regular Polygon Vertices";
         var mkdocs_page_input_path = "1 Physics/3 Waves/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -64,8 +64,18 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">3 Waves</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Interference Patterns on a Water Surface from Point Sources at Regular Polygon Vertices</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#problem-summary">Problem Summary</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#wave-equation-for-a-single-source">Wave Equation for a Single Source</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-select-a-regular-polygon">Step 1: Select a Regular Polygon</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-25-superposition-and-interference">Step 2–5: Superposition and Interference</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-6-visualization">Step 6: Visualization</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +173,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">3 Waves</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Interference Patterns on a Water Surface from Point Sources at Regular Polygon Vertices</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +181,36 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="interference-patterns-on-a-water-surface-from-point-sources-at-regular-polygon-vertices">Interference Patterns on a Water Surface from Point Sources at Regular Polygon Vertices</h1>
+<h2 id="problem-summary">Problem Summary</h2>
+<p>We analyze the wave interference on a water surface produced by coherent point sources located at the vertices of a regular polygon. Each source emits a circular wave with the same amplitude <span class="arithmatex">\(A\)</span>, wavelength <span class="arithmatex">\(\lambda\)</span>, frequency <span class="arithmatex">\(f\)</span>, and phase <span class="arithmatex">\(\phi\)</span>. Using the principle of wave superposition, we calculate and visualize the resulting interference patterns.</p>
+<hr/>
+<h2 id="wave-equation-for-a-single-source">Wave Equation for a Single Source</h2>
+<p>The water surface displacement from a single source at position <span class="arithmatex">\((x_0, y_0)\)</span> is given by:</p>
+<div class="arithmatex">\[
+\eta(x, y, t) = \frac{A}{\sqrt{r}} \cos(k r - \omega t + \phi)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(r = \sqrt{(x - x_0)^2 + (y - y_0)^2}\)</span></li>
+<li><span class="arithmatex">\(k = \frac{2\pi}{\lambda}\)</span></li>
+<li><span class="arithmatex">\(\omega = 2\pi f\)</span></li>
+</ul>
+<hr/>
+<h2 id="step-1-select-a-regular-polygon">Step 1: Select a Regular Polygon</h2>
+<p>We choose a <strong>regular pentagon</strong> (5 sources) centered at the origin.</p>
+<hr/>
+<h2 id="step-25-superposition-and-interference">Step 2–5: Superposition and Interference</h2>
+<p>The total displacement at point <span class="arithmatex">\((x, y)\)</span> from all sources is:</p>
+<div class="arithmatex">\[
+\eta_{\text{sum}}(x, y, t) = \sum_{i=1}^N \eta_i(x, y, t)
+\]</div>
+<p>Where <span class="arithmatex">\(N = 5\)</span> for the pentagon.</p>
+<hr/>
+<h2 id="step-6-visualization">Step 6: Visualization</h2>
+<p>We visualize <span class="arithmatex">\(\eta_{\text{sum}}(x, y, t)\)</span> over a 2D grid at a fixed time to observe interference patterns.</p>
+<hr/>
+<p><img alt="alt text" src="../image.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
