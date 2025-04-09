@@ -14,6 +14,9 @@ Understanding these thresholds is a cornerstone in mission design, launch dynami
 The minimum speed needed for a stable **circular orbit** just above a celestial body's surface:
 
 
+$$
+v_1 = \sqrt{\frac{G M}{R}}
+$$
 
 
 
