@@ -7,7 +7,7 @@
 The motion of a projectile can be described by applying Newton's second law. For a projectile launched from an initial position with velocity $v_0$ at an angle $\theta$ with respect to the horizontal, we have:
  
 
-$$\frac{d^2x}{dt^2} = 0$$
+
  
 
 $$\frac{d^2y}{dt^2} = -g$$
