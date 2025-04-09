@@ -106,8 +106,8 @@ $$F_d = -bv$$
  
 This leads to a modified set of differential equations:
  
-$$\frac{d^2x}{dt^2} = -\frac{b}{m}v_x$$
-$$\frac{d^2y}{dt^2} = -g - \frac{b}{m}v_y$$
+$$\frac{d^2x}{dt^2} = $$-\frac{b}{m}v_x$$
+$$\frac{d^2y}{dt^2} = $$-g - \frac{b}{m}v_y$$
  
 Where $b$ is the drag coefficient and $m$ is the mass of the projectile.
  
