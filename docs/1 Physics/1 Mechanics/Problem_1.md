@@ -102,7 +102,7 @@ In practice, projectile motion is influenced by:
  
 A simple model for air resistance is to include a drag force proportional to velocity:
  
-$$F_d = -bv$$
+F_d = -bv
  
 This leads to a modified set of differential equations:
  
