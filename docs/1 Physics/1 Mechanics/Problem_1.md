@@ -9,7 +9,7 @@ The motion of a projectile can be described by applying Newton's second law. For
 In the horizontal direction (x-axis):
 $$\frac{d^2x}{dt^2} = 0$$
  
-In the vertical direction (y-axis):
+
 $$\frac{d^2y}{dt^2} = -g$$
  
 Where $g$ is the acceleration due to gravity (approximately 9.81 m/s² on Earth).
