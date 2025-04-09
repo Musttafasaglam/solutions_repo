@@ -1,8 +1,6 @@
 #  Interference Patterns on a Water Surface from Point Sources at Regular Polygon Vertices
 
-##  Problem Summary
 
-We analyze the wave interference on a water surface produced by coherent point sources located at the vertices of a regular polygon. Each source emits a circular wave with the same amplitude $A$, wavelength $\lambda$, frequency $f$, and phase $\phi$. Using the principle of wave superposition, we calculate and visualize the resulting interference patterns.
 
 ---
 
