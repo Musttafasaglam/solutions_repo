@@ -12,12 +12,12 @@ When a payload is released from a moving rocket or satellite near Earth, its pat
 
 According to Newton’s Law:
 
-\
+
 $$
 F = G \frac{M m}{r^2}
 $$
 
-\
+
 
 Where:
 
@@ -37,12 +37,12 @@ Where:
 
 The gravitational force results in an acceleration:
 
-\[
+\
 $$
 \vec{a} = -\frac{G M}{r^3} \vec{r}
 $$
 
-\]
+\
 
 This acceleration always points toward Earth’s center and governs the curvature of the path.
 
@@ -52,12 +52,12 @@ This acceleration always points toward Earth’s center and governs the curvatur
 
 The total mechanical energy \( E \) of the payload is:
 
-\[
+\
 $$
 E = \frac{1}{2}mv^2 - \frac{G M m}{r}
 $$
 
-\]
+\
 
 This determines the type of trajectory:
 
@@ -71,12 +71,12 @@ This determines the type of trajectory:
 
 The threshold for unbound motion:
 
-\[
+\
 $$
 v_{\text{esc}} = \sqrt{\frac{2GM}{r}}
 $$
 
-\]
+\
 
 If a payload exceeds this, it is no longer gravitationally bound to Earth.
 
