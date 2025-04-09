@@ -22,7 +22,7 @@ Integrating these equations with respect to time with initial conditions:
  
 We obtain:
  
-x(t) = (v_0\cos\theta)t
+$$x(t) = (v_0\cos\theta)t
 y(t) = h + (v_0\sin\theta)t - \frac{1}{2}gt^2$$
  
 These parametric equations describe the position of the projectile at any time $t$.
