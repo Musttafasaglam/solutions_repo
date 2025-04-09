@@ -12,12 +12,12 @@ When a payload is released from a moving rocket or satellite near Earth, its pat
 
 According to Newton’s Law:
 
-\[
+\
 $$
 F = G \frac{M m}{r^2}
 $$
 
-\]
+\
 
 Where:
 
