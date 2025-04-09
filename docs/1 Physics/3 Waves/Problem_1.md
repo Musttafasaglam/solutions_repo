@@ -1,4 +1,4 @@
-#  Interference Patterns on a Water Surface from Point Sources at Regular Polygon Vertices
+
 
 
 
