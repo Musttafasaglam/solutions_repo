@@ -78,6 +78,16 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#graph-representation-of-circuits">Graph Representation of Circuits</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#series-reduction">Series Reduction</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#parallel-reduction">Parallel Reduction</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#iterative-simplification-loop">Iterative Simplification Loop</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#handling-nested-combinations">Handling Nested Combinations</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -171,7 +181,54 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h2 id="algorithm-explanation">Algorithm Explanation</h2>
+<p>In the context of electrical circuits, calculating the equivalent resistance becomes increasingly complex when the circuit involves multiple resistors arranged in arbitrary configurations. Traditional approaches using series and parallel simplification rules can quickly become intractable. Instead, <strong>graph theory</strong> provides a structured and algorithmic alternative that is particularly suitable for automated analysis and simulation.</p>
+<h3 id="graph-representation-of-circuits">Graph Representation of Circuits</h3>
+<ul>
+<li>Each <strong>node</strong> in the graph represents a <strong>junction</strong> or a connection point in the circuit.</li>
+<li>Each <strong>edge</strong> represents a <strong>resistor</strong>, where the <strong>edge weight</strong> corresponds to the resistance value in ohms (<span class="arithmatex">\(\Omega\)</span>).</li>
+<li>The graph may contain <strong>parallel edges</strong> (multiple resistors between the same two nodes) or <strong>nodes with degree 2</strong> (candidates for series simplification).</li>
+</ul>
+<p>This representation enables the use of graph traversal and simplification algorithms to reduce the circuit step by step.</p>
+<hr/>
+<h3 id="series-reduction">Series Reduction</h3>
+<p>A <strong>series connection</strong> occurs when a node (say, <span class="arithmatex">\(N\)</span>) connects exactly <strong>two other nodes</strong> (say, <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>), and the node <span class="arithmatex">\(N\)</span> does <strong>not</strong> represent a special input/output node (e.g., <code>start</code> or <code>end</code>). In this case, resistors between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(N\)</span> (<span class="arithmatex">\(R_1\)</span>), and <span class="arithmatex">\(N\)</span> and <span class="arithmatex">\(B\)</span> (<span class="arithmatex">\(R_2\)</span>) can be combined into a single resistor:</p>
+<div class="arithmatex">\[
+R_{\text{eq}} = R_1 + R_2
+\]</div>
+<p>The simplification steps are:
+1. Identify node <span class="arithmatex">\(N\)</span> with degree 2.
+2. Remove <span class="arithmatex">\(N\)</span> and its connected edges.
+3. Create a new edge between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> with resistance <span class="arithmatex">\(R_1 + R_2\)</span>.</p>
+<p>This operation maintains the electrical equivalence of the circuit.</p>
+<hr/>
+<h3 id="parallel-reduction">Parallel Reduction</h3>
+<p>A <strong>parallel connection</strong> is identified when <strong>multiple resistors</strong> connect the <strong>same pair of nodes</strong>. In this case, the equivalent resistance is given by:</p>
+<div class="arithmatex">\[
+\frac{1}{R_{\text{eq}}} = \sum_{i=1}^{n} \frac{1}{R_i}
+\]</div>
+<p>Where <span class="arithmatex">\(R_i\)</span> is the resistance of the <span class="arithmatex">\(i\)</span>-th edge between the two nodes. The steps for simplification are:
+1. Identify all parallel edges between node pair <span class="arithmatex">\((A, B)\)</span>.
+2. Calculate the reciprocal sum to find the equivalent resistance.
+3. Remove all redundant edges and add a single edge with resistance <span class="arithmatex">\(R_{\text{eq}}\)</span>.</p>
+<p>This process preserves the total conductance between the two nodes.</p>
+<hr/>
+<h3 id="iterative-simplification-loop">Iterative Simplification Loop</h3>
+<p>Since circuits may have <strong>nested</strong> combinations of series and parallel resistors, the algorithm runs in an iterative loop:
+1. Traverse all nodes to detect and simplify series configurations.
+2. Traverse all node pairs to simplify parallel configurations.
+3. Repeat the above steps until <strong>no more simplifications</strong> can be performed.</p>
+<p>This loop guarantees that the circuit is reduced to its simplest form—a single resistor between the input and output terminals (e.g., <code>start</code> and <code>end</code> nodes).</p>
+<hr/>
+<h3 id="handling-nested-combinations">Handling Nested Combinations</h3>
+<p>The power of this algorithm lies in its ability to handle <strong>nested combinations</strong> without explicitly recognizing the hierarchical structure. For example:</p>
+<ul>
+<li>A resistor in <strong>series</strong> with a set of resistors in <strong>parallel</strong> will automatically be handled as the series reduction algorithm continues to simplify linear chains.</li>
+<li>A <strong>parallel</strong> set of paths, each of which contains <strong>series</strong> connections internally, will be simplified from the inside out.</li>
+</ul>
+<p>Because the simplification operations are <strong>local and independent</strong>, they naturally propagate through the graph as the structure is reduced.</p>
+<hr/>
+<p><img alt="alt text" src="../image.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
