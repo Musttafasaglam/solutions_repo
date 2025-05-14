@@ -53,7 +53,7 @@ Since circuits may have **nested** combinations of series and parallel resistors
 2. Traverse all node pairs to simplify parallel configurations.
 3. Repeat the above steps until **no more simplifications** can be performed.
 
-This loop guarantees that the circuit is reduced to its simplest form—a single resistor between the input and output terminals (e.g., `start` and `end` nodes).
+This loop guarantees that the circuit is reduced to its simplest form—a single resistor between the input and output terminals (e.g., start and end nodes).
 
 ---
 
