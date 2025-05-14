@@ -14,7 +14,7 @@ This representation enables the use of graph traversal and simplification algori
 
 ###  Series Reduction
 
-A **series connection** occurs when a node (say, $N$) connects exactly **two other nodes** (say, $A$ and $B$), and the node $N$ does **not** represent a special input/output node (e.g., `start` or `end`). In this case, resistors between $A$ and $N$ ($R_1$), and $N$ and $B$ ($R_2$) can be combined into a single resistor:
+A **series connection** occurs when a node (say, $N$) connects exactly **two other nodes** (say, $A$ and $B$), and the node $N$ does **not** represent a special input/output node (e.g., start or end). In this case, resistors between $A$ and $N$ ($R_1$), and $N$ and $B$ ($R_2$) can be combined into a single resistor:
 
 $$
 R_{\text{eq}} = R_1 + R_2
