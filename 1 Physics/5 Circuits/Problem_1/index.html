@@ -218,7 +218,7 @@ R_{\text{eq}} = R_1 + R_2
 1. Traverse all nodes to detect and simplify series configurations.
 2. Traverse all node pairs to simplify parallel configurations.
 3. Repeat the above steps until <strong>no more simplifications</strong> can be performed.</p>
-<p>This loop guarantees that the circuit is reduced to its simplest form—a single resistor between the input and output terminals (e.g., <code>start</code> and <code>end</code> nodes).</p>
+<p>This loop guarantees that the circuit is reduced to its simplest form—a single resistor between the input and output terminals (e.g., start and end nodes).</p>
 <hr/>
 <h3 id="handling-nested-combinations">Handling Nested Combinations</h3>
 <p>The power of this algorithm lies in its ability to handle <strong>nested combinations</strong> without explicitly recognizing the hierarchical structure. For example:</p>
