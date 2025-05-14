@@ -33,52 +33,7 @@ We explore:
 
 ---
 
-## 3. Python Simulation
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Constants
-q = 1.0      # charge (C)
-m = 1.0      # mass (kg)
-E = np.array([0.0, 0.0, 0.0])  # electric field (V/m)
-B = np.array([0.0, 0.0, 1.0])  # magnetic field (T)
-
-# Initial conditions
-v = np.array([1.0, 0.0, 0.0])  # initial velocity (m/s)
-r = np.array([0.0, 0.0, 0.0])  # initial position (m)
-
-# Time settings
-dt = 0.01
-steps = 2000
-
-# Arrays to store trajectory
-trajectory = np.zeros((steps, 3))
-velocity = np.zeros((steps, 3))
-
-# Euler method
-for i in range(steps):
-    trajectory[i] = r
-    velocity[i] = v
-    F = q * (E + np.cross(v, B))
-    a = F / m
-    v = v + a * dt
-    r = r + v * dt
-
-# Plotting
-fig = plt.figure()
-ax = fig.add_subplot(111)
-ax.plot(trajectory[:, 0], trajectory[:, 1])
-ax.set_xlabel('x (m)')
-ax.set_ylabel('y (m)')
-ax.set_title('Trajectory of a Charged Particle in a Uniform Magnetic Field')
-ax.grid(True)
-plt.axis('equal')
-plt.show()
-```
-
----
+![alt text](image-1.png)
 
 ## 4. Observations
 
