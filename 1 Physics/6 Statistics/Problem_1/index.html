@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Advanced Statistical Simulations - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Advanced Statistical Simulations";
         var mkdocs_page_input_path = "1 Physics/6 Statistics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -82,7 +82,41 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">6 Statistics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Advanced Statistical Simulations</a>
+<ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#problem-1-exploring-the-central-limit-theorem-clt-through-simulations">Problem 1: Exploring the Central Limit Theorem (CLT) Through Simulations</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview-and-historical-context">Overview and Historical Context</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#experimental-setup">Experimental Setup</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#real-world-implications">Real-World Implications</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#problem-2-estimating-pi-using-monte-carlo-methods">Problem 2: Estimating \(\pi\) Using Monte Carlo Methods</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#monte-carlo-methods-background">Monte Carlo Methods: Background</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#part-a-unit-circle-in-a-square">Part A: Unit Circle in a Square</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#theory">Theory</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#part-b-buffons-needle">Part B: Buffon’s Needle</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#theory_1">Theory</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#final-thoughts">Final Thoughts</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a>
+</li>
+</ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
 </li>
@@ -161,7 +195,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">6 Statistics</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Advanced Statistical Simulations</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -169,7 +203,84 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<p>Problem1</p>
+<h1 id="advanced-statistical-simulations">Advanced Statistical Simulations</h1>
+<hr/>
+<h2 id="problem-1-exploring-the-central-limit-theorem-clt-through-simulations">Problem 1: Exploring the Central Limit Theorem (CLT) Through Simulations</h2>
+<h3 id="overview-and-historical-context">Overview and Historical Context</h3>
+<p>The <strong>Central Limit Theorem</strong> (CLT) is a fundamental result in probability theory that emerged in the 18th century with early insights from Abraham de Moivre, and was formalized by Pierre-Simon Laplace and later by Lyapunov. It underpins the reliability of the <strong>normal distribution</strong> in inferential statistics.</p>
+<p>The theorem states:</p>
+<blockquote>
+<p>Given a population with finite mean <span class="arithmatex">\(\mu\)</span> and finite standard deviation <span class="arithmatex">\(\sigma\)</span>, the sampling distribution of the sample mean <span class="arithmatex">\(\bar{X}\)</span> of size <span class="arithmatex">\(n\)</span> tends toward a normal distribution as <span class="arithmatex">\(n\)</span> becomes large, regardless of the population’s original distribution.</p>
+</blockquote>
+<div class="arithmatex">\[
+\bar{X} \sim \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
+\]</div>
+<hr/>
+<h3 id="experimental-setup">Experimental Setup</h3>
+<p>We simulate three population types:</p>
+<ul>
+<li>Uniform distribution <span class="arithmatex">\(\mathcal{U}(0,1)\)</span></li>
+<li>Exponential distribution <span class="arithmatex">\(\text{Exp}(\lambda = 1)\)</span></li>
+<li>Binomial distribution <span class="arithmatex">\(\text{Bin}(n=10, p=0.5)\)</span></li>
+</ul>
+<p>We generate:
+- A large population (<span class="arithmatex">\(N = 100,000\)</span> values)
+- Sampling distributions for sample sizes <span class="arithmatex">\(n = \{5, 10, 30, 50\}\)</span></p>
+<p><img alt="alt text" src="../image-4.png"/>
+<img alt="alt text" src="../image-5.png"/>
+<img alt="alt text" src="../image-6.png"/></p>
+<hr/>
+<hr/>
+<h3 id="real-world-implications">Real-World Implications</h3>
+<ul>
+<li><strong>Survey analysis</strong>: Estimating population opinions with confidence intervals.</li>
+<li><strong>Industrial quality control</strong>: Using sample means to monitor process stability.</li>
+<li><strong>Machine Learning</strong>: Underpins assumptions in regression and hypothesis testing.</li>
+</ul>
+<hr/>
+<h2 id="problem-2-estimating-pi-using-monte-carlo-methods">Problem 2: Estimating <span class="arithmatex">\(\pi\)</span> Using Monte Carlo Methods</h2>
+<hr/>
+<h3 id="monte-carlo-methods-background">Monte Carlo Methods: Background</h3>
+<p>Monte Carlo methods originated with <strong>Stanislaw Ulam and John von Neumann</strong> during nuclear simulations in the 1940s. They rely on <strong>random sampling</strong> to numerically approximate mathematical constants, integrals, and probabilities.</p>
+<hr/>
+<h2 id="part-a-unit-circle-in-a-square">Part A: Unit Circle in a Square</h2>
+<h3 id="theory">Theory</h3>
+<p>Using geometry:
+- Area of unit circle: <span class="arithmatex">\(A_{\text{circle}} = \pi r^2 = \pi\)</span>
+- Area of square enclosing it: <span class="arithmatex">\(A_{\text{square}} = (2r)^2 = 4\)</span></p>
+<p>Thus,
+$$
+\pi \approx 4 \cdot \frac{\text{Points inside circle}}{\text{Total points}}
+$$</p>
+<p><img alt="alt text" src="../image-7.png"/></p>
+<hr/>
+<hr/>
+<h2 id="part-b-buffons-needle">Part B: Buffon’s Needle</h2>
+<h3 id="theory_1">Theory</h3>
+<p>Drop a needle of length <span class="arithmatex">\(l\)</span> on parallel lines spaced <span class="arithmatex">\(d\)</span> apart. The probability of crossing a line is:
+$$
+P = \frac{2l}{\pi d}
+$$</p>
+<p>So:
+$$
+\pi \approx \frac{2lN}{dC}
+$$
+where <span class="arithmatex">\(C\)</span> is the number of crossings among <span class="arithmatex">\(N\)</span> trials.</p>
+<hr/>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<ul>
+<li><strong>CLT</strong> ensures the robustness of sampling in statistics, explaining the central role of the normal distribution.</li>
+<li><strong>Monte Carlo methods</strong> demonstrate how randomness can converge on precise mathematical truths.</li>
+<li>These tools are foundational across data science, finance, physics, and AI.</li>
+</ul>
+<hr/>
+<h2 id="references">References</h2>
+<ul>
+<li>Ross, S. (2014). <em>Introduction to Probability and Statistics for Engineers and Scientists</em>.</li>
+<li>Grimmett &amp; Stirzaker. (2001). <em>Probability and Random Processes</em>.</li>
+<li>Wikipedia: Central Limit Theorem, Buffon’s Needle, Monte Carlo Method.</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
