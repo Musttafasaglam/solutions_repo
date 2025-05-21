@@ -86,6 +86,8 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#monte-carlo-methods-background">Monte Carlo Methods: Background</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -171,7 +173,48 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
+<h2 id="problem-2-estimating-pi-using-monte-carlo-methods">Problem 2: Estimating <span class="arithmatex">\(\pi\)</span> Using Monte Carlo Methods</h2>
+<hr/>
+<h3 id="monte-carlo-methods-background">Monte Carlo Methods: Background</h3>
+<p>Monte Carlo methods originated with <strong>Stanislaw Ulam and John von Neumann</strong> during nuclear simulations in the 1940s. They rely on <strong>random sampling</strong> to numerically approximate mathematical constants, integrals, and probabilities.</p>
+<hr/>
+<h2 id="part-a-unit-circle-in-a-square">Part A: Unit Circle in a Square</h2>
+<h3 id="theory">Theory</h3>
+<p>Using geometry:
+- Area of unit circle: <span class="arithmatex">\(A_{\text{circle}} = \pi r^2 = \pi\)</span>
+- Area of square enclosing it: <span class="arithmatex">\(A_{\text{square}} = (2r)^2 = 4\)</span></p>
+<p>Thus,
+$$
+\pi \approx 4 \cdot \frac{\text{Points inside circle}}{\text{Total points}}
+$$</p>
+<p><img alt="alt text" src="../image-7.png"/></p>
+<hr/>
+<hr/>
+<h2 id="part-b-buffons-needle">Part B: Buffon’s Needle</h2>
+<h3 id="theory_1">Theory</h3>
+<p>Drop a needle of length <span class="arithmatex">\(l\)</span> on parallel lines spaced <span class="arithmatex">\(d\)</span> apart. The probability of crossing a line is:
+$$
+P = \frac{2l}{\pi d}
+$$</p>
+<p>So:
+$$
+\pi \approx \frac{2lN}{dC}
+$$
+where <span class="arithmatex">\(C\)</span> is the number of crossings among <span class="arithmatex">\(N\)</span> trials.</p>
+<hr/>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<ul>
+<li><strong>CLT</strong> ensures the robustness of sampling in statistics, explaining the central role of the normal distribution.</li>
+<li><strong>Monte Carlo methods</strong> demonstrate how randomness can converge on precise mathematical truths.</li>
+<li>These tools are foundational across data science, finance, physics, and AI.</li>
+</ul>
+<hr/>
+<h2 id="references">References</h2>
+<ul>
+<li>Ross, S. (2014). <em>Introduction to Probability and Statistics for Engineers and Scientists</em>.</li>
+<li>Grimmett &amp; Stirzaker. (2001). <em>Probability and Random Processes</em>.</li>
+<li>Wikipedia: Central Limit Theorem, Buffon’s Needle, Monte Carlo Method.</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
