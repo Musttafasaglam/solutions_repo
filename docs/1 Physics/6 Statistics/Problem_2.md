@@ -1,65 +1,70 @@
 ##  Problem 2: Estimating $\pi$ Using Monte Carlo Methods
 
----
+###  Motivation
 
-###  Monte Carlo Methods: Background
+Monte Carlo methods use random sampling to compute numerical estimates. A well-known application is the estimation of $\pi$ via two different approaches:
 
-Monte Carlo methods originated with **Stanislaw Ulam and John von Neumann** during nuclear simulations in the 1940s. They rely on **random sampling** to numerically approximate mathematical constants, integrals, and probabilities.
-
----
-
-## Part A: Unit Circle in a Square
-
-###  Theory
-
-Using geometry:
-- Area of unit circle: $A_{\text{circle}} = \pi r^2 = \pi$
-- Area of square enclosing it: $A_{\text{square}} = (2r)^2 = 4$
-
-Thus,
-$$
-\pi \approx 4 \cdot \frac{\text{Points inside circle}}{\text{Total points}}
-$$
-
-![alt text](image-7.png)
+1. **Geometric Method (Circle inside Square)**
+2. **Buffon's Needle Experiment**
 
 ---
 
+###  Part I: Circle Method
 
+#### Theoretical Idea
+
+- Inscribe a unit circle in a 2x2 square.
+- Generate random points $(x, y) \in [-1, 1] \times [-1, 1]$.
+- Count how many lie within the unit circle ($x^2 + y^2 \leq 1$).
+
+Approximate:
+
+$$
+\pi \approx 4 \cdot \frac{\text{Number inside circle}}{\text{Total points}}
+$$
+
+![alt text](image-9.png)
+---
+
+### 🔷 Part II: Buffon’s Needle
+
+#### Theoretical Idea
+
+Let $L$ be needle length and $d$ be line spacing ($L \leq d$). Then:
+
+$$
+\pi \approx \frac{2 L N}{d C}
+$$
+
+Where:
+- $N$ = total drops
+- $C$ = number of crossings
+
+```python
+def estimate_pi_buffon(num_throws=10000, L=1.0, d=2.0):
+    theta = np.random.uniform(0, np.pi, num_throws)
+    y = np.random.uniform(0, d/2, num_throws)
+    crosses = y <= (L/2) * np.sin(theta)
+    C = np.sum(crosses)
+    if C == 0: return None
+    return (2 * L * num_throws) / (d * C)
+
+print(f'Estimating π using Buffon’s Needle: π ≈ {estimate_pi_buffon():.5f}')
+```
 
 ---
 
-## Part B: Buffon’s Needle
+###  Comparison of Methods
 
-###  Theory
-
-Drop a needle of length $l$ on parallel lines spaced $d$ apart. The probability of crossing a line is:
-$$
-P = \frac{2l}{\pi d}
-$$
-
-So:
-$$
-\pi \approx \frac{2lN}{dC}
-$$
-where $C$ is the number of crossings among $N$ trials.
-
-
-
-
+| Method             | Strengths                      | Weaknesses                      |
+|--------------------|-------------------------------|----------------------------------|
+| Circle Monte Carlo | Visually intuitive, simple    | Converges slowly                 |
+| Buffon’s Needle    | Historical, geometric insight | Requires understanding of angles |
 
 ---
 
-##  Final Thoughts
+##  Final Reflections
 
-- **CLT** ensures the robustness of sampling in statistics, explaining the central role of the normal distribution.
-- **Monte Carlo methods** demonstrate how randomness can converge on precise mathematical truths.
-- These tools are foundational across data science, finance, physics, and AI.
-
----
-
-##  References
-
-- Ross, S. (2014). *Introduction to Probability and Statistics for Engineers and Scientists*.
-- Grimmett & Stirzaker. (2001). *Probability and Random Processes*.
-- Wikipedia: Central Limit Theorem, Buffon’s Needle, Monte Carlo Method.
+- CLT simulations demonstrate robustness across population types and sizes.
+- Monte Carlo techniques for $\pi$ reinforce key statistical concepts.
+- These methods highlight how randomness, repetition, and statistical laws combine to yield predictable outcomes.
