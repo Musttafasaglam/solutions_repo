@@ -4,7 +4,7 @@
 
 ---
 
-###  Motivation
+###  Motivation:
 
 The acceleration $g$ due to gravity is a fundamental constant that influences a wide range of physical phenomena. Measuring $g$ accurately is crucial for understanding gravitational interactions, designing structures, and conducting experiments in various fields.
 
@@ -12,7 +12,7 @@ One classic method for determining $g$ is through the oscillations of a simple p
 
 ---
 
-###  Task
+###  Task:
 
 Measure the acceleration $g$ due to gravity using a pendulum and analyze in detail the uncertainties in the measurements.
 
@@ -20,59 +20,76 @@ Measure the acceleration $g$ due to gravity using a pendulum and analyze in deta
 
 ---
 
-###  Calculations
+###  Procedure:
 
-#### 1. Calculate the period
+#### 1. Materials:
 
-$$
+- A string (1 or 1.5 meters long)
+- A small weight (e.g., bag of coins, bag of sugar, key chain)
+- Stopwatch (or smartphone timer)
+- Ruler or measuring tape
+
+#### 2. Setup:
+
+- Attach the weight to the string and fix the other end to a sturdy support.
+- Measure the length of the pendulum, $L$, from the suspension point to the center of the weight.
+- Record the resolution of the measuring tool and calculate the uncertainty as:
+
+\[
+\Delta L = \frac{\text{Ruler Resolution}}{2}
+\]
+
+#### 3. Data Collection:
+
+- Displace the pendulum slightly ($<15^\circ$) and release it.
+- Measure the time for 10 full oscillations ($T_{10}$), and repeat this 10 times.
+- Calculate the mean time for 10 oscillations ($\overline{T_{10}}$) and the standard deviation ($\sigma_T$).
+- Determine the uncertainty in the mean time using:
+
+\[
+\Delta T_{10} = \frac{\sigma_T}{\sqrt{n}} \quad \text{where } n = 10
+\]
+
+---
+
+###  Calculations:
+
+#### 1. Calculate the period:
+
+\[
 T = \frac{\overline{T_{10}}}{10}, \quad \Delta T = \frac{\Delta T_{10}}{10}
-$$
+\]
 
-#### 2. Determine $g$
+#### 2. Determine $g$:
 
-$$
+\[
 g = \frac{4\pi^2 L}{T^2}
-$$
+\]
 
-#### 3. Propagate uncertainties
+#### 3. Propagate uncertainties:
 
-$$
-\Delta g = g \sqrt{ \left( \frac{\Delta L}{L} \right)^2 + \left( 2 \cdot \frac{\Delta T}{T} \right)^2 }
-$$
-
----
-
-###  Analysis
-
-1. Compare your measured $g$ with the standard value ($9.81 \, \text{m/s}^2$).
-2. Discuss:
-   - The effect of measurement resolution on $\Delta L$.
-   - Variability in timing and its impact on $\Delta T$.
-   - Any assumptions or experimental limitations.
+\[
+\Delta g = g \cdot \sqrt{\left( \frac{\Delta L}{L} \right)^2 + \left( 2 \cdot \frac{\Delta T}{T} \right)^2}
+\]
 
 ---
 
-###  Deliverables
+###  Analysis:
 
-#### 1. Tabulated data in markdown
+#### 1. Compare your measured $g$ with the standard value:
 
-| Quantity        | Value               |
-|----------------|---------------------|
-| $L$             | ... m               |
-| $\Delta L$      | ... m               |
-| $T_{10}$ values | [t1, t2, ..., t10]  |
-| $\overline{T_{10}}$ | ... s           |
-| $\sigma_T$      | ... s               |
-| $\Delta T$      | ... s               |
-| $g$             | ... m/s²            |
-| $\Delta g$      | ... m/s²            |
+# Standard gravitational acceleration
+g_standard = 9.81  # m/s^2
 
-#### 2. Discussion on uncertainties
+print(f"Standard gravitational acceleration (g): {g_standard} m/s²")
 
-- Discuss how the resolution of your measuring tools contributes to $\Delta L$.
-- Analyze how human reaction time or stopwatch accuracy impacts $\Delta T$.
-- Mention assumptions such as small-angle approximation, air resistance, and ideal string properties.
+
+#### 2. Discuss:
+
+- The effect of measurement resolution on $\Delta L$
+- Variability in timing and its impact on $\Delta T$
+- Any assumptions or experimental limitations
 
 ---
 
-
+![alt text](image.png)
