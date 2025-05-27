@@ -66,7 +66,7 @@ binomial_means = sample_means(binomial_pop, sample_sizes, 10000)
 ![alt text](image-6.png)
 
 
-### 🔷 Theoretical Basis
+###  Theoretical Basis
 
 According to CLT:
 
@@ -82,7 +82,7 @@ Where:
 
 ---
 
-### 🔷 Discussion & Implications
+###  Discussion & Implications
 
 - **Skewed distributions** like exponential require larger $n$ for the CLT to manifest clearly.
 - **Spread** of the sampling distribution decreases with increasing $n$ (due to $1/\sqrt{n}$ scaling).
