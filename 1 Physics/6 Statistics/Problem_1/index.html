@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Advanced Statistical Simulations - Physics and Mathematics</title>
+<title>Comprehensive Statistical Simulation Report - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Advanced Statistical Simulations";
+        var mkdocs_page_name = "Comprehensive Statistical Simulation Report";
         var mkdocs_page_input_path = "1 Physics/6 Statistics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -82,15 +82,21 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">6 Statistics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Advanced Statistical Simulations</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Comprehensive Statistical Simulation Report</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#problem-1-exploring-the-central-limit-theorem-clt-through-simulations">Problem 1: Exploring the Central Limit Theorem (CLT) Through Simulations</a>
+<li class="toctree-l3"><a class="reference internal" href="#problem-1-exploring-the-central-limit-theorem-clt-through-simulations">Problem 1: Exploring the Central Limit Theorem (CLT) through Simulations</a>
 <ul>
-<li class="toctree-l4"><a class="reference internal" href="#overview-and-historical-context">Overview and Historical Context</a>
+<li class="toctree-l4"><a class="reference internal" href="#motivation">Motivation</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#experimental-setup">Experimental Setup</a>
+<li class="toctree-l4"><a class="reference internal" href="#objectives">Objectives</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#real-world-implications">Real-World Implications</a>
+<li class="toctree-l4"><a class="reference internal" href="#population-distributions-and-justification">Population Distributions and Justification</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#sampling-and-sample-mean-calculation">Sampling and Sample Mean Calculation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#theoretical-basis">🔷 Theoretical Basis</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#discussion-implications">🔷 Discussion &amp; Implications</a>
 </li>
 </ul>
 </li>
@@ -173,7 +179,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">6 Statistics</li>
-<li class="breadcrumb-item active">Advanced Statistical Simulations</li>
+<li class="breadcrumb-item active">Comprehensive Statistical Simulation Report</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -181,41 +187,78 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="advanced-statistical-simulations">Advanced Statistical Simulations</h1>
+<h1 id="comprehensive-statistical-simulation-report">Comprehensive Statistical Simulation Report</h1>
+<h2 id="problem-1-exploring-the-central-limit-theorem-clt-through-simulations">Problem 1: Exploring the Central Limit Theorem (CLT) through Simulations</h2>
+<h3 id="motivation">Motivation</h3>
+<p>The <strong>Central Limit Theorem (CLT)</strong> is a key concept in inferential statistics. It asserts that the distribution of the sample mean of a sufficiently large number of independent and identically distributed (i.i.d.) random variables tends toward a normal distribution, regardless of the shape of the original population distribution. This result is significant because it provides a theoretical justification for the widespread use of the normal distribution in hypothesis testing, confidence interval estimation, and control processes.</p>
+<p>CLT has real-world significance in domains such as manufacturing, medicine, finance, and social sciences, where it facilitates predictive modeling and statistical inference even when the underlying population is unknown or skewed.</p>
 <hr/>
-<h2 id="problem-1-exploring-the-central-limit-theorem-clt-through-simulations">Problem 1: Exploring the Central Limit Theorem (CLT) Through Simulations</h2>
-<h3 id="overview-and-historical-context">Overview and Historical Context</h3>
-<p>The <strong>Central Limit Theorem</strong> (CLT) is a fundamental result in probability theory that emerged in the 18th century with early insights from Abraham de Moivre, and was formalized by Pierre-Simon Laplace and later by Lyapunov. It underpins the reliability of the <strong>normal distribution</strong> in inferential statistics.</p>
-<p>The theorem states:</p>
-<blockquote>
-<p>Given a population with finite mean <span class="arithmatex">\(\mu\)</span> and finite standard deviation <span class="arithmatex">\(\sigma\)</span>, the sampling distribution of the sample mean <span class="arithmatex">\(\bar{X}\)</span> of size <span class="arithmatex">\(n\)</span> tends toward a normal distribution as <span class="arithmatex">\(n\)</span> becomes large, regardless of the population’s original distribution.</p>
-</blockquote>
-<div class="arithmatex">\[
-\bar{X} \sim \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
-\]</div>
-<hr/>
-<h3 id="experimental-setup">Experimental Setup</h3>
-<p>We simulate three population types:</p>
+<h3 id="objectives">Objectives</h3>
 <ul>
-<li>Uniform distribution <span class="arithmatex">\(\mathcal{U}(0,1)\)</span></li>
-<li>Exponential distribution <span class="arithmatex">\(\text{Exp}(\lambda = 1)\)</span></li>
-<li>Binomial distribution <span class="arithmatex">\(\text{Bin}(n=10, p=0.5)\)</span></li>
+<li>Simulate populations from multiple distributions (Uniform, Exponential, Binomial).</li>
+<li>Draw repeated samples of various sizes.</li>
+<li>Calculate sample means to build sampling distributions.</li>
+<li>Visualize the convergence of these sampling distributions to a normal distribution.</li>
+<li>Analyze how sample size and population variance influence convergence.</li>
 </ul>
-<p>We generate:
-- A large population (<span class="arithmatex">\(N = 100,000\)</span> values)
-- Sampling distributions for sample sizes <span class="arithmatex">\(n = \{5, 10, 30, 50\}\)</span></p>
+<hr/>
+<h3 id="population-distributions-and-justification">Population Distributions and Justification</h3>
+<ol>
+<li><strong>Uniform Distribution</strong>: Represents complete randomness within bounds (e.g., sensor noise).</li>
+<li><strong>Exponential Distribution</strong>: Captures time-between-event data (e.g., radioactive decay).</li>
+<li><strong>Binomial Distribution</strong>: Models success/failure outcomes (e.g., clinical trial results).</li>
+</ol>
+<p>Each simulated population consists of 100,000 values.</p>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+np.random.seed(0)
+N = 100000
+uniform_pop = np.random.uniform(0, 1, N)
+exponential_pop = np.random.exponential(1, N)
+binomial_pop = np.random.binomial(10, 0.5, N)
+</code></pre>
+<hr/>
+<h3 id="sampling-and-sample-mean-calculation">Sampling and Sample Mean Calculation</h3>
+<p>We generate 10,000 samples for each distribution at sizes <span class="arithmatex">\(n = 5\)</span>, <span class="arithmatex">\(10\)</span>, <span class="arithmatex">\(30\)</span>, and <span class="arithmatex">\(50\)</span>.</p>
+<pre><code class="language-python">def sample_means(pop, sample_sizes, num_samples):
+    means = {}
+    for n in sample_sizes:
+        means[n] = [np.mean(np.random.choice(pop, size=n)) for _ in range(num_samples)]
+    return means
+
+sample_sizes = [5, 10, 30, 50]
+uniform_means = sample_means(uniform_pop, sample_sizes, 10000)
+exponential_means = sample_means(exponential_pop, sample_sizes, 10000)
+binomial_means = sample_means(binomial_pop, sample_sizes, 10000)
+</code></pre>
+<hr/>
 <p><img alt="alt text" src="../image-4.png"/>
 <img alt="alt text" src="../image-8.png"/>
 <img alt="alt text" src="../image-6.png"/></p>
+<h3 id="theoretical-basis">🔷 Theoretical Basis</h3>
+<p>According to CLT:</p>
+<div class="arithmatex">\[
+\bar{X} \sim \mathcal{N}\left(\mu, \frac{\sigma^2}{n}\right)
+\]</div>
+<p>Where:
+- <span class="arithmatex">\(\bar{X}\)</span> is the sample mean
+- <span class="arithmatex">\(\mu\)</span> is the population mean
+- <span class="arithmatex">\(\sigma^2\)</span> is the population variance
+- <span class="arithmatex">\(n\)</span> is the sample size</p>
 <hr/>
-<hr/>
-<h3 id="real-world-implications">Real-World Implications</h3>
+<h3 id="discussion-implications">🔷 Discussion &amp; Implications</h3>
 <ul>
-<li><strong>Survey analysis</strong>: Estimating population opinions with confidence intervals.</li>
-<li><strong>Industrial quality control</strong>: Using sample means to monitor process stability.</li>
-<li><strong>Machine Learning</strong>: Underpins assumptions in regression and hypothesis testing.</li>
+<li><strong>Skewed distributions</strong> like exponential require larger <span class="arithmatex">\(n\)</span> for the CLT to manifest clearly.</li>
+<li><strong>Spread</strong> of the sampling distribution decreases with increasing <span class="arithmatex">\(n\)</span> (due to <span class="arithmatex">\(1/\sqrt{n}\)</span> scaling).</li>
+<li>Even with moderate sample sizes (<span class="arithmatex">\(n = 30\)</span>), the CLT provides remarkably accurate approximations.</li>
 </ul>
-<hr/>
+<p><strong>Applications:</strong>
+- Polling
+- Quality control
+- Financial modeling
+- Clinical trials</p>
 <hr/>
 </div>
 </div><footer>
