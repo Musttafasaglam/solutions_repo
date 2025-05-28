@@ -26,7 +26,7 @@ $$
 ![alt text](image-9.png)
 ---
 
-### 🔷 Part II: Buffon’s Needle
+###  Part II: Buffon’s Needle
 
 #### Theoretical Idea
 
