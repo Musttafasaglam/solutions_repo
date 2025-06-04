@@ -51,6 +51,15 @@ def estimate_pi_buffon(num_throws=10000, L=1.0, d=2.0):
 
 print(f'Estimating π using Buffon’s Needle: π ≈ {estimate_pi_buffon():.5f}')
 ```
+![alt text](image-10.png)
+### Run and Visualize
+
+```python
+pi_value = buffon_needle_simulation(1000, L=1.0, d=2.0)
+print(f"Estimated π: {pi_value:.5f}")
+```
+
+
 
 ---
 
